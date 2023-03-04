@@ -42,25 +42,9 @@ const ExpenseItem = (props) => {
         <tr>
         <td>{props.name}</td>
         <td>{currency}{props.cost}</td>
-        <td><button style={{
-                border: 'none',
-                color: 'white',
-                backgroundColor: 'lightgreen',
-                borderRadius: '50%',
-                textAlign: 'center',
-                fontWeight: 'bold'
-
-            }}onClick={event=> increaseAllocation(props.name)}>+</button></td>
-        <td><button style={{
-                border: 'none',
-                color: 'white',
-                backgroundColor: 'red',
-                borderRadius: '50%',
-                textAlign: 'center',
-                fontWeight: 'bold',
-
-            }} onClick={event=> reduceAllocation(props.name)}>-</button></td>
-        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><FcPlus size='2.2em' onClick={event=> increaseAllocation(props.name)}>+</FcPlus></td>
+        <td><AiFillMinusCircle size='2.2em' onClick={event=> reduceAllocation(props.name)}>-</AiFillMinusCircle></td>
+        <td><TiDelete size='3em' color='red' onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
 };
